@@ -27,10 +27,6 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
 
             <?php ActiveForm::end(); ?>
-
-            <p class="text-muted text-center mt-3 small">
-                Логин: <strong>admin</strong> / Пароль: <strong>admin</strong>
-            </p>
         </div>
     </div>
 </div>

@@ -8,10 +8,19 @@ use yii\helpers\Html;
 
 ?>
 <footer id="footer" class="mt-auto py-3 footer-sport">
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-6 text-center text-md-start">&copy; --><?php //= Html::encode(Yii::$app->name) ?><!-- --><?php //= date('Y') ?><!--</div>-->
-<!--            <div class="col-md-6 text-center text-md-end">Atomic Hero</div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="footer-admin-links">
+                <?php if (Yii::$app->user->isGuest): ?>
+                    <?= Html::a('Войти', ['/site/login'], ['class' => 'footer-link']) ?>
+                <?php else: ?>
+                    <?= Html::a('Админ-панель', ['/admin/team/index'], ['class' => 'footer-link']) ?>
+                    <?= Html::a('Выйти', ['/site/logout'], [
+                        'class' => 'footer-link',
+                        'data-method' => 'post',
+                    ]) ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
 </footer>

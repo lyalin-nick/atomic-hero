@@ -368,8 +368,16 @@ main > .container {
     border-top: 3px solid var(--sport-primary);
 }
 
-.footer-sport a {
-    color: rgba(255, 255, 255, 0.5);
+.footer-link {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.75rem;
+    text-decoration: none;
+    margin-right: 12px;
+    transition: color 0.15s;
+}
+
+.footer-link:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* ===== Empty state ===== */
