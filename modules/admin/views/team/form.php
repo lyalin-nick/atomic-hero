@@ -26,23 +26,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php foreach ($participants as $i => $p): ?>
             <div class="participant-row card card-body mb-2">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-8">
                         <label>ФИО</label>
                         <?= Html::textInput("Participant[$i][full_name]", $p->full_name, ['class' => 'form-control', 'required' => true]) ?>
                     </div>
-                    <div class="col-md-2">
-                        <label>Год рождения</label>
-                        <?= Html::textInput("Participant[$i][birth_year]", $p->birth_year, ['class' => 'form-control', 'type' => 'number', 'required' => true]) ?>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Место работы / отдел</label>
-                        <?= Html::textInput("Participant[$i][workplace]", $p->workplace, ['class' => 'form-control', 'required' => true]) ?>
-                    </div>
-                    <div class="col-md-2">
-                        <label>Табельный номер</label>
-                        <?= Html::textInput("Participant[$i][org_number]", $p->org_number, ['class' => 'form-control', 'required' => true]) ?>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-end">
+                    <div class="col-md-4 d-flex align-items-end">
                         <button type="button" class="btn btn-danger btn-sm remove-participant">Удалить</button>
                     </div>
                 </div>
@@ -67,11 +55,8 @@ var idx = document.querySelectorAll('.participant-row').length;
 document.getElementById('add-participant').addEventListener('click', function() {
     var html = '<div class="participant-row card card-body mb-2">' +
         '<div class="row">' +
-        '<div class="col-md-3"><label>ФИО</label><input type="text" name="Participant[' + idx + '][full_name]" class="form-control" required></div>' +
-        '<div class="col-md-2"><label>Год рождения</label><input type="number" name="Participant[' + idx + '][birth_year]" class="form-control" required></div>' +
-        '<div class="col-md-3"><label>Место работы / отдел</label><input type="text" name="Participant[' + idx + '][workplace]" class="form-control" required></div>' +
-        '<div class="col-md-2"><label>Идент. номер</label><input type="text" name="Participant[' + idx + '][org_number]" class="form-control" required></div>' +
-        '<div class="col-md-2 d-flex align-items-end"><button type="button" class="btn btn-danger btn-sm remove-participant">Удалить</button></div>' +
+        '<div class="col-md-8"><label>ФИО</label><input type="text" name="Participant[' + idx + '][full_name]" class="form-control" required></div>' +
+        '<div class="col-md-4 d-flex align-items-end"><button type="button" class="btn btn-danger btn-sm remove-participant">Удалить</button></div>' +
         '</div></div>';
     document.getElementById('participants-container').insertAdjacentHTML('beforeend', html);
     idx++;

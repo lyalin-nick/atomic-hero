@@ -140,9 +140,6 @@ class TeamController extends Controller
             $p = new Participant();
             $p->team_id = $team->id;
             $p->full_name = $data['full_name'];
-            $p->birth_year = (int)$data['birth_year'];
-            $p->workplace = $data['workplace'];
-            $p->org_number = $data['org_number'];
             $p->save();
         }
     }

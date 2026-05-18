@@ -21,9 +21,6 @@ class m000000_000001_create_tables extends Migration
             'id' => $this->primaryKey(),
             'team_id' => $this->integer()->notNull(),
             'full_name' => $this->string(255)->notNull(),
-            'birth_year' => $this->integer()->notNull(),
-            'workplace' => $this->string(255)->notNull(),
-            'org_number' => $this->string(100)->notNull(),
         ]);
 
         $this->createIndex('idx-participant-team_id', 'participant', 'team_id');

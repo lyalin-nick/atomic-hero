@@ -14,10 +14,9 @@ class Participant extends ActiveRecord
     public function rules()
     {
         return [
-            [['team_id', 'full_name', 'birth_year', 'workplace', 'org_number'], 'required'],
-            [['team_id', 'birth_year'], 'integer'],
-            [['full_name', 'workplace'], 'string', 'max' => 255],
-            [['org_number'], 'string', 'max' => 100],
+            [['team_id', 'full_name'], 'required'],
+            [['team_id'], 'integer'],
+            [['full_name'], 'string', 'max' => 255],
         ];
     }
 
@@ -27,9 +26,6 @@ class Participant extends ActiveRecord
             'id' => 'ID',
             'team_id' => 'Команда',
             'full_name' => 'ФИО',
-            'birth_year' => 'Год рождения',
-            'workplace' => 'Место работы / отдел',
-            'org_number' => 'Идентификационный номер',
         ];
     }
 

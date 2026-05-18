@@ -67,9 +67,6 @@ $formatTime = function ($seconds) {
                     <tr>
                         <th style="width: 60px;">#</th>
                         <th>ФИО</th>
-                        <th>Год рождения</th>
-                        <th>Место работы / отдел</th>
-                        <th>Табельный номер</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,9 +74,6 @@ $formatTime = function ($seconds) {
                         <tr>
                             <td><span class="participant-number"><?= $i + 1 ?></span></td>
                             <td><strong><?= Html::encode($p->full_name) ?></strong></td>
-                            <td><?= Html::encode($p->birth_year) ?></td>
-                            <td><?= Html::encode($p->workplace) ?></td>
-                            <td><?= Html::encode($p->org_number) ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
