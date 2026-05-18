@@ -8,6 +8,7 @@ use Yii;
 use app\models\LoginForm;
 use app\models\Team;
 use yii\captcha\CaptchaAction;
+use yii\db\Expression;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\base\Security;
@@ -77,7 +78,7 @@ class SiteController extends Controller
     public function actionIndex(): string
     {
         $teams = Team::find()
-            ->orderBy(['place' => SORT_ASC, 'name' => SORT_ASC])
+            ->orderBy([new Expression('place IS NULL ASC'), 'place' => SORT_ASC, 'name' => SORT_ASC])
             ->all();
 
         return $this->render('index', ['teams' => $teams]);

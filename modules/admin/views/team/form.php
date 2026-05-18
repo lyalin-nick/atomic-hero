@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?= Html::textInput("Participant[$i][workplace]", $p->workplace, ['class' => 'form-control', 'required' => true]) ?>
                     </div>
                     <div class="col-md-2">
-                        <label>Идент. номер</label>
+                        <label>Табельный номер</label>
                         <?= Html::textInput("Participant[$i][org_number]", $p->org_number, ['class' => 'form-control', 'required' => true]) ?>
                     </div>
                     <div class="col-md-2 d-flex align-items-end">

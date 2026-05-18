@@ -69,7 +69,7 @@ $formatTime = function ($seconds) {
                         <th>ФИО</th>
                         <th>Год рождения</th>
                         <th>Место работы / отдел</th>
-                        <th>Идентификационный номер</th>
+                        <th>Табельный номер</th>
                     </tr>
                 </thead>
                 <tbody>
